@@ -1,1 +1,16 @@
-<h1>Detail of Photo </h1>
+<h1>Photo Details </h1>
+<p>
+  <%= @user_photo.caption %>
+</p>
+<p>
+  <img src = "<%= @user_photo.source%>"
+</p>
+<p>
+  <%= time_ago_in_words(@user_photo.created_at) %>
+</p>
+
+<p>
+  <a href="/photos" class="btn btn-default">  Go back</a>
+  <a href="/photos/<%= @user_photo.id %>/edit" class="btn btn-default">  Edit</a>
+  <a href="/delete_photo/<%= @user_photo.id %>" class="btn btn-default">  Delete</a>
+</p>
