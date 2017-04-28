@@ -1,10 +1,13 @@
 <h1>Edit Photo <%= @user_photo.id %></h1>
 
 <form action = "/update_photo/<%= @user_photo.id %>">
-  <label for= "caption">    Caption:  </label>
-  <input type = "text" name = "caption" id = "caption" value = <%= @user_photo.caption %>>
-  <div><label for= "source">    Source:  </label>
-    <input type = "text" name = "source" id = "source" value = <%= @user_photo.source %>>
+
+  <label for= "source">    Image URL:  </label>
+  <input type = "text" name = "source" id = "source" value = <%= @user_photo.source %>>
+
+  <div>
+    <label for= "caption">    Caption:  </label>
+    <input type = "text" name = "caption" id = "caption" value = "<%= @user_photo.caption %>">
   </div>
   <div>
     <button> Update Photo </button>

@@ -40,7 +40,7 @@ class PhotosController < ApplicationController
     edit_photo.caption = cap
     edit_photo.save
 
-    redirect_to("/photos")
+    redirect_to("/photos/#{edit_photo.id}")
   end
 
   def destroy_row
